@@ -39,6 +39,7 @@ const verifyAuth = async (ctx, next) => {
   console.log("验证授权的middleware~");
   // 1.获取token
   const authorization = ctx.headers.authorization;
+  console.log(authorization)
   // 当取不到authorization
   if(!authorization){
     const error = new Error(errorTypes.NUAUTHORIZATION);
